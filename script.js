@@ -27,17 +27,18 @@ function bestellen(){
 		if(bestelling == "fris"){
 			aantal1234 = parseInt(prompt("hoeveel fris wilt uw?"));
 			aantalfris = aantalfris + aantal1234;
+			alert(aantal1234 + " Fris toegevoegd aan bestelling");
 		}
 
 		if(bestelling == "bier"){
 			aantal1234 = parseInt(prompt("hoeveel bier wilt uw?"));
-
+			alert(aantal1234 + " Bier toegevoegd aan bestelling");
 			aantalbier = aantalbier + aantal1234;
 		}
 
 		if(bestelling == "wijn"){
 			aantal1234 = parseInt(prompt("hoeveel wijn wilt uw?"));
-
+			alert(aantal1234 + " Wijn toegevoegd aan bestelling");
 			aantalwijn = aantalwijn + aantal1234;
 		}	
 		
@@ -45,13 +46,16 @@ function bestellen(){
 			aantal1234 = parseInt(prompt("wilt uw een schaal van 8 of 16 bitterballen?"));
 
 			if(aantal1234 == "8"){
-				schaal8 = schaal8 +1;
+				aantal1234 = parseInt(prompt("hoeveel schalen bitterballen van 8 wilt u?"));
+				schaal8 = schaal8 + aantal1234;
+				alert(aantal1234 + "Bitterbal schalen toegevoegt aan order");
 			}
 
 			if(aantal1234 == "16"){
-				schaal16 = schaal16 +1;
+			aantal1234 = parseInt(prompt("hoeveel schalen bitterballen van 16 wilt u?"));
+			schaal16 = schaal16 + aantal1234;
+				alert(aantal1234 + " Bitterbal schalen toegevoegd aan order");
 			}
-			
 		}	
 	}
 }
@@ -77,10 +81,11 @@ function kosten(){
 		document.write("aantalwijn besteld = " + aantalwijn + "<br>" + "kosten = € " + totaalPrijsWijn + "<br>");
 
 	if(schaal8 > 0)
-		document.write("aantal 8 bitterballen besteld = " + schaal8 + "<br>" + "kosten = € " + totaalPrijsSchaal8 + "<br>");
+		document.write("aantal 8 bitterbalschalen besteld = " + schaal8 + "<br>" + "kosten = € " + totaalPrijsSchaal8 + "<br>");
 
 	if(schaal16 > 0)
-		document.write("aantal 16 bitterballen besteld = " + schaal16 + "<br>" + "kosten = € " + totaalPrijsSchaal16 + "<br>");
+		document.write("aantal 16 bitterbalschalen besteld = " + schaal16 + "<br>" + "kosten = € " + totaalPrijsSchaal16 + "<br>");
+	
 }
 
 kosten();
